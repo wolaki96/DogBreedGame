@@ -96,6 +96,15 @@
     function getMultipleChoices(n, correctAnswer, array) {
         // Use a while loop and the getRandomElement() function
         // Make sure there are no duplicates in the array
+        let dogChoices = [];
+        dogChoices.push(correctAnswer);
+        while (dogChoices.length < n) {
+            let randomElement = (getRandomElement(array));
+            if (!dogChoices.includes(randomElement)) {
+                    dogChoices.push(randomElement);
+            }
+            return shuffleArray(dogChoices);
+        }
 
     }
 
